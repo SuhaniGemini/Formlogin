@@ -1,0 +1,49 @@
+*{
+    margin: auto;
+    padding: auto;
+}
+.assignment-1{
+
+    text-align: center;
+}
+.assignment{
+    background:linear-gradient(to right ,rgba(57,49, 175),rgba(0, 198, 255));
+    margin-top:40px;
+  
+    padding: 3%;
+    background-size: contain;
+    height:100%;
+     margin-left: 61px; 
+}
+.text1{
+    color:white;
+}
+
+
+.assignment-1 input{
+    border: none;
+    border-radius: 24px;
+}
+.assignment-2{
+    background: white;
+    border-top-left-radius: 10% 50%;
+    border-bottom-left-radius: 10% 50%;
+}
+
+.assignment .assignment-form{
+    padding: 10%;
+    margin-top: 10%;
+    
+}
+.assignment-heading{
+    text-align: center;
+    margin-top: 6%;
+    margin-bottom: -15%;
+}
+.badge badge-pill badge-light{
+    width: 75px;
+     height: 30px;
+}
+#b1{
+    border-radius: 16px;
+}
