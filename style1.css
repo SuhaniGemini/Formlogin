@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
 }
+.row{
+    text-align: center;
+    align-items: center;
+}
 
 body {
     background: linear-gradient(to right, rgba(57, 49, 175), rgba(0, 198, 255));
