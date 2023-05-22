@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,73 +8,99 @@
     <title>Document</title>
     <link rel="stylesheet" href="style1.css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    
+
 </head>
+
 <body>
-<form action="#">
-<div class="assignment">
-    <div class="row" style="text-align: center; align-items: center;">
-        <div class="col-md-3 assignment1">
-            <h3 class="text1">Welcome</h3>
-            <h3 class="text1">To </h3>
-            <h3 class="text1">Gemini Solutions</h3><br/>
-            <p></p>
-            <button type="button" class="btn btn-light" id="b1">Login</button>
-           
-        </div>
-        <div class="col-md-7 assignment-2">
+    <form action="#">
+        <div class="assignment">
+            <div class="row" style="text-align: center; align-items: center;">
+                <div class="col-md-3 assignment1">
+                    <h3 class="text1">Welcome</h3>
+                    <h3 class="text1">To </h3>
+                    <h3 class="text1">Gemini Solutions</h3><br />
+                    <p></p>
+                    <button type="button" class="btn btn-light" id="b1">Login</button>
+
+                </div>
+                <div class="col-md-7 assignment-2">
                     <h3 class="assignment-heading">Apply as an Employee</h3>
                     <div class="row assignment-form">
                         <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="fname" name="fname"placeholder="Enter Your FirstName *" value="" required/>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control"  id="lname" name="lname" placeholder="Enter Your LastName *" value=""  required/>
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" name="txtPassword" id="txtPassword" class="form-control" placeholder="Enter Your Password *" value=""  required/>
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" name="txtConfirmPassword" id="txtConfirmPassword" class="form-control"  placeholder="Confirm Password *" value=""  required />
-                                </div>
-                                <div class="mw-90">
-                                <div class="form-group">
-                                    
-                                        <label class="radio"> 
-                                            <input type="radio" name="gender" value="male" >
-                                            <span> Male </span> 
-                                        </label>
-                                        <label class="radio"> 
-                                            <input type="radio" name="gender" value="female">
-                                            <span>Female </span> 
-                                        </label>
-                                    </div>
-                                </div>
+                            <div class="form-group">
+                                <label>First Name*</label>
+                                <input type="text" class="form-control" id="fname" name="fname"
+                                    placeholder="Enter Your FirstName *" value="" />
+                                <span id="name-error"></span>
                             </div>
-                            <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Last Name*</label>
+                                <input type="text" class="form-control" id="lname" name="lname"
+                                    placeholder="Enter Your LastName *" value="" />
+                                <span id="lastname-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Password*</label>
+                                <input type="text" name="txtPassword" id="txtPassword" class="form-control"
+                                    placeholder="Enter Your Password *" value="" />
+                                <span id="password-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Confirm Password*</label>
+                                <input type="text" name="txtConfirmPassword" id="txtConfirmPassword"
+                                    class="form-control" placeholder="Confirm Password *" value="" />
+                                <span id="cpassword-error"></span>
+                            </div>
+                            <div class="mw-90">
                                 <div class="form-group">
-                                    <input value="" type="email" class="form-control" placeholder="Enter Your Email Address*"  />
+                                    <label>Gender*</label>
+                                    <!-- <br> -->
+                                    Male  <input type="radio" id="rbtn1" name="gender" value="Male">
+
+                                    Female <input type="radio" id="rbtn2" name="gender" value="Female">
+
+                                    <span id="gen-error"></span>
+
                                 </div>
-                                <div class="form-group">
-                                    <input  value="" type="tel"  pattern="^[0-9]{10}$" minlength="10" maxlength="10" class="form-control" placeholder="Your Phone *" />
-                                </div>
-                                <div class="form-group">
-                                    <select class="form-control" id="options">
-                                        <option selected disabled>Please select your security question</option>
-                                        <option value="ques1">What is Your old Phone Number</option>
-                                        <option value="ques2">What is last Phone's model?</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <input value="" type="text" class="form-control" placeholder="Enter Your Answer *"   required/>
-                                </div>
-                                <button type="submit" class="btn btn-primary" id="submit"  onclick="validate()">Submit </button> 
                             </div>
                         </div>
-                    </div> 
-    
-                </form> 
-                <script src="myscript.js"></script>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Email Address*</label>
+                                <input value="" type="email" id="email" class="form-control"
+                                    placeholder="Enter Your Email Address*" />
+                                <span id="email-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone No</label>
+                                <input value="" type="tel" id="phone" pattern="^[0-9]{10}$" minlength="10"
+                                    maxlength="10" class="form-control" placeholder="Your Phone *" />
+                                <!-- <span id="e-error"></span> -->
+                            </div>
+                            <div class="form-group">
+                                <!-- <p id="security">Security question*</p> -->
+                                <label>Security Question*</label>
+                                <select class="form-control" id="options">
+                                    <option selected disabled>Please select your security question</option>
+                                    <option value="ques1">What is Your old Phone Number</option>
+                                    <option value="ques2">What is last Phone's model?</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Answer</label>
+                                <input value="" id="answer" type="text" class="form-control"
+                                    placeholder="Enter Your Answer *" />
+                                <span id="ans-error"></span>
+
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="submit">Submit </button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </form>
+    <div id="table-container"></div>
+    <script src="./myscript.js"></script>
 </body>
+
 </html>                                     
