@@ -1,5 +1,11 @@
 var error_confirmation = 0;
 var table_validation =0;
+// function form_validation() {
+//
+// }
+
+
+
 var firstName = document.getElementById("fname");
 var lastName = document.getElementById("lname");
 var emailAddress = document.getElementById("email");
@@ -10,7 +16,7 @@ var confirmPassword = document.getElementById("txtConfirmPassword");
 // var gen = document.querySelector('input[name="gender"]:checked').value;
 
 // console.log(gen);
-function validate(e) {
+function form_validation(e) {
   e.preventDefault();
 
   var firstNameValue = firstName.value.trim();
@@ -65,7 +71,7 @@ function validate(e) {
     // error_confirmation = 1;
   } else if (!validPassword.test(passwordValue)) {
     passwordErr.innerHTML =
-      "Password must have at least one Uppercase, lowercase, digit, special characters & 8 characters";
+      "Password should be in a format with at least one Uppercase, lowercase, digit, special characters & 8 characters";
     error_confirmation = 1;
   } else if (cpasswordValue === "") {
     cpasswordErr.textContent = "Confirm Password is required";
@@ -116,7 +122,7 @@ function validate(e) {
   createTable(firstName.value,lastName.value,emailAddress.value,phone.value)
 }
 
-document.getElementById("submit").addEventListener("click", validate);
+document.getElementById("submit").addEventListener("click", form_validation);
 
 //localstoragefunction
 
@@ -145,22 +151,29 @@ function createTable(fname,lname,email,phone) {
   const table_heading =["first name","last name","email","phone"];
   const thead = document.createElement('thead');
   const headerRow = document.createElement('tr');
+
+
    table_heading.forEach((key)=>{
     const th = document.createElement('th');
     th.textContent = key;
     headerRow.appendChild(th);
   });
+
   thead.appendChild(headerRow);
   table.appendChild(thead);
+
   const valuesOfTable = [fname, lname, email, phone];
   // Create table body
   const tbody = document.createElement('tbody');
   const row = document.createElement('tr');
+
+
   valuesOfTable.forEach(item => {
       const td = document.createElement('td');
       td.textContent = item;
       row.appendChild(td);
   });
+
   tbody.appendChild(row);
   table.appendChild(tbody);
 
@@ -174,11 +187,13 @@ function createTable(fname,lname,email,phone) {
     // Create table body
     const tbody = document.createElement('tbody');
     const row = document.createElement('tr');
+
     valuesOfTable.forEach(item => {
         const td = document.createElement('td');
         td.textContent = item;
         row.appendChild(td);
     });
+
     tbody.appendChild(row);
     table.appendChild(tbody);
   
@@ -186,3 +201,28 @@ function createTable(fname,lname,email,phone) {
   }
   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
